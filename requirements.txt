@@ -1,10 +1,7 @@
-#plotly==5.5.0
 plotly
 streamlit
-fpdf==1.7.2
-kaleido==0.2.1
-#protobuf==3.20.3
-#altair<5
+fpdf
+kaleido
 pandas
 
 # old req
@@ -14,3 +11,6 @@ pandas
 #numpy==1.19.5
 #fpdf==1.7.2
 #kaleido==0.2.1
+#plotly==5.5.0
+#protobuf==3.20.3
+#altair<5
