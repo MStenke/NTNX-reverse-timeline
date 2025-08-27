@@ -204,10 +204,18 @@ def generate_gantt_diagramm(gantt_df):
             linecolor = '#636363',
             linewidth = 2,
             #title = 'VALUE',
-            titlefont = dict(
-                family = 'sans-serif',
-                size = 18,
-                color = 'lightgrey'
+            #titlefont = dict(
+            #    family = 'sans-serif',
+            #    size = 18,
+            #    color = 'lightgrey'
+            #),
+            title = dict(
+                text = 'Meilenstein', # Or 'VALUE' as you had commented, or an empty string ""
+                font = dict(
+                    family = 'sans-serif',
+                    size = 18,
+                    color = 'black' # Note: 'lightgrey' might be invisible on a white background
+                )
             ),
             showticklabels = True,
             #tickangle = 45,
