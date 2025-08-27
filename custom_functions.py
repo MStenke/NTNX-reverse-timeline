@@ -222,12 +222,16 @@ def generate_gantt_diagramm(gantt_df):
 
     # Add vertical line for today
     today = date.today()
-    gantt_diagramm.update_layout(shapes=[
-        dict(
-        type='line',
-        yref='paper', y0=0, y1=1,
-        xref='x', x0=today, x1=today)
-    ])
+    #gantt_diagramm.update_layout(shapes=[
+    #    dict(
+    #    type='line',
+    #    yref='paper', y0=0, y1=1,
+    #    xref='x', x0=today, x1=today)
+    #])
+
+    # NEW CODE TO ADD
+    today = date.today()
+    gantt_diagramm.add_vline(x=today, line_width=2, line_dash="dash", line_color="red")
 
     gantt_diagramm.update_yaxes(autorange="reversed") # otherwise tasks are listed from the bottom up
     gantt_diagramm.update_layout(
