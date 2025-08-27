@@ -161,7 +161,8 @@ def change_milestone_duration(milestone_number_duration):
         
 
 # Generate gantt Diagram
-@st.cache(allow_output_mutation=True)
+@st.cache_data
+#@st.cache(allow_output_mutation=True)
 def generate_gantt_diagramm(gantt_df):
 
     gantt_diagramm = px.timeline(gantt_df, 
@@ -370,8 +371,8 @@ def create_pdf_report(data_df,customer_name,created_by_name,gantt_diagramm,outpu
 
 # Send Slack Message
 # NO cache function!
-def send_slack_message():
-    # Send a Slack message to a channel via a webhook. 
-    webhook = aws_access_key_id=st.secrets["slack_webhook_url"]
-    payload = {"text": 'Reverse Timeline Planning - Report erstellt.'}
-    requests.post(webhook, json.dumps(payload))
+#def send_slack_message():
+#    # Send a Slack message to a channel via a webhook. 
+#    webhook = aws_access_key_id=st.secrets["slack_webhook_url"]
+#    payload = {"text": 'Reverse Timeline Planning - Report erstellt.'}
+#    requests.post(webhook, json.dumps(payload))
