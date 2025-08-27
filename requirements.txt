@@ -1,9 +1,9 @@
 plotly==5.5.0
-streamlit==1.5.0
+streamlit
 fpdf==1.7.2
 kaleido==0.2.1
-protobuf==3.20.3
-altair<5
+#protobuf==3.20.3
+#altair<5
 
 # old req
 #plotly==5.4.0
